@@ -1,0 +1,17 @@
+{% from "macros/fields.tmpl" import render_input_field, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}kubný{% endblock %}
+
+{% block content %}
+  <h3>Zadej data do formuláře</h3>
+  <div class="form-group"></div>
+  <form method="POST" id='insert-form'>
+    {{ form.hidden_tag() }}
+    {{ render_input_field(form.Brand) }}
+    {{ render_input_field(form.Time) }}
+    {{ render_input_field(form.Size) }}
+    {{ render_input_field(form.Type) }}
+    {{ render_submit() }}
+  </form>
+{% endblock %}

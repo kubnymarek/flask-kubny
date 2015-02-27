@@ -1,0 +1,21 @@
+{% from "macros/fields.tmpl" import render_input_field, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}Auta{% endblock %}
+
+{% block content %}
+  <h3>Vložené auta</h3>
+  <p>Ahoj světe.</p>
+  <p> tady nic není<strong>Ani tady</strong></p>
+  <div class="form-group">Vložené auta</div>
+ <table>
+    {% for n in data %}
+        <tr><td>{{ n.Brand }}</td>
+        <td>{{ n.Time }}</td>
+        <td>{{ n.Size }}</td>
+        <td>{{ n.Type }}</td></tr>
+    {% endfor %}
+    </table>
+
+
+{% endblock %}
